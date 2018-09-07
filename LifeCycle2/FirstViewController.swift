@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FirstViewController.swift
 //  LifeCycle2
 //
 //  Created by Evgeniy Ryshkov on 07.09.2018.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class FirstViewController: UIViewController {
 
-    let name = "Yellow"
+    let name = "Red"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //avaliable pragmas are #function, #line, #file, #column
         print("View Controller \(name) \(#function)")
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("View Controller \(name) \(#function)")
@@ -32,7 +32,7 @@ class SecondViewController: UIViewController {
         super.viewWillDisappear(animated)
         print("View Controller \(name) \(#function)")
     }
-    
+
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         print("View Controller \(name) \(#function)")
@@ -42,9 +42,10 @@ class SecondViewController: UIViewController {
         super.viewWillLayoutSubviews()
         print("View Controller \(name) \(#function)")
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         print("View Controller \(name) \(#function)")
     }
 }
+
